@@ -1,0 +1,30 @@
+# Compiler and compiler flags
+CC = gcc
+CFLAGS = -Wall -Wextra -g
+
+# Source files
+SOURCES = evidence.c ghost.c house.c hunter.c main.c logger.c room.c utils.c
+
+# Object files
+OBJECTS = $(SOURCES:.c=.o)
+
+# Executable name
+EXECUTABLE = fp
+
+# Default target
+all: $(EXECUTABLE)
+
+# Link object files into the executable
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OBJECTS)
+
+# Compile source files into object files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean target to remove object files and executable
+clean:
+	rm -f $(OBJECTS) $(EXECUTABLE)
+
+# Phony targets
+.PHONY: all clean
