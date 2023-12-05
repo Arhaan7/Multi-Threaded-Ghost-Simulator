@@ -34,6 +34,3 @@ utils.c
 
 #Rules: 
 In the finalization of results for the game, once all threads have completed their tasks, the program follows a set of rules to present the outcomes. Firstly, it displays the results on the screen, listing hunters whose fear levels are equal to or exceed MAX_FEAR and those with boredom levels equal to or surpassing MAX_BOREDOM. Subsequently, if all hunters exhibit excessively high levels of fear or boredom, the program announces that the ghost has emerged victorious. Additionally, it prints all the evidence collected by the hunters. If three distinct pieces of evidence have been gathered, the program identifies the ghost corresponding to those pieces. The ghost's type is then revealed, along with an indication of whether the collected evidence accurately identified the ghost. 
-
-#Use of AI
-The project leverages GitHub Copilot for code suggestions and optimization, with proper citations included in the code comments.
